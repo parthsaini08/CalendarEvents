@@ -1,0 +1,32 @@
+<!-- events.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Calendar Events</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+    <center><h1 color="white">Google Calendar Events</h1></center>
+    <div class="container">
+        {% for event in events %}
+        <div class="card">
+          <div class="box">
+            <div class="content">
+              <h2>{{ forloop.counter}}. {{event.summary }}</h2>
+              <p><strong>Start:</strong> {{ event.start.dateTime}}</p>
+                <p><strong>End:</strong> {{ event.end.dateTime}}</p>
+                <p><strong>Status:</strong> {{ event.status}}</p>
+                <p><strong>Link:</strong><a href= {{ event.htmlLink}}>{{ event.htmlLink}}</a></p>
+                <p><strong>Description:</strong> {{ event.description}}</p>
+                <p><strong>Location:</strong> {{ event.location }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    
+    
+</body>
+</html>
