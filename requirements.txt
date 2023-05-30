@@ -23,7 +23,7 @@ requests-oauthlib
 rsa==4.9
 six==1.16.0
 sqlparse==0.4.3
-tomli==1.2.3
+tomli
 tzdata==2022.7
 uritemplate==4.1.1
 urllib3==1.26.14
